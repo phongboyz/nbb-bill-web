@@ -161,8 +161,8 @@ class CreateComponent extends Component
         $bm->crc = $this->crc;
         $bm->fees = $this->fees;
         $bm->acno2 = $this->acno2;
-        $bm->user_id = 1;
-        $bm->department_id = 1;
+        $bm->user_id = auth()->user()->id;
+        $bm->department_id = auth()->user()->dpart_id;
         $bm->save();
 
         session()->flash('success', 'ເພີ່ມຂໍ້ມູນສຳເລັດ');

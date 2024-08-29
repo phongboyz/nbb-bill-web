@@ -13,23 +13,23 @@ class BillMorpComponent extends Component
 
     public function render()
     {
-        $this->data = BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->orderBy('id','desc')->limit($this->dataQ)->get();
-        $this->count = count(BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->limit($this->dataQ)->get());
+        $this->data = BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->where('user_id',auth()->user()->id)->orderBy('id','desc')->limit($this->dataQ)->get();
+        $this->count = count(BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->where('user_id',auth()->user()->id)->limit($this->dataQ)->get());
         return view('livewire.bill.bill-morp-component');
     }
 
     public function searchData(){
         if(!empty($this->dateS)){
             if($this->search){
-                $this->data = BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->where('valuedt','like','%'.$this->date.'%')->orderBy('id','desc')->limit($this->dataQ)->get();
-                $this->count = count(BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->where('valuedt','like','%'.$this->date.'%')->limit($this->dataQ)->get());
+                $this->data = BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->where('valuedt','like','%'.$this->date.'%')->where('user_id',auth()->user()->id)->orderBy('id','desc')->limit($this->dataQ)->get();
+                $this->count = count(BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->where('valuedt','like','%'.$this->date.'%')->where('user_id',auth()->user()->id)->limit($this->dataQ)->get());
             }else{
-                $this->data = BhaiMorp::where('valuedt','like','%'.$this->date.'%')->orderBy('id','desc')->limit($this->dataQ)->get();
-                $this->count = count(BhaiMorp::where('valuedt','like','%'.$this->date.'%')->limit($this->dataQ)->get());
+                $this->data = BhaiMorp::where('valuedt','like','%'.$this->date.'%')->where('user_id',auth()->user()->id)->orderBy('id','desc')->limit($this->dataQ)->get();
+                $this->count = count(BhaiMorp::where('valuedt','like','%'.$this->date.'%')->where('user_id',auth()->user()->id)->limit($this->dataQ)->get());
             }
         }else{
-            $this->data = BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->orderBy('id','desc')->limit($this->dataQ)->get();
-            $this->count = count(BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->limit($this->dataQ)->get());
+            $this->data = BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->where('user_id',auth()->user()->id)->orderBy('id','desc')->limit($this->dataQ)->get();
+            $this->count = count(BhaiMorp::whereAny(['no','name_mop','tel','acno_fak','name_hub','tel_hub','acno_hub'],'LIKE','%'.$this->search.'%')->where('user_id',auth()->user()->id)->limit($this->dataQ)->get());
         }
     }
 

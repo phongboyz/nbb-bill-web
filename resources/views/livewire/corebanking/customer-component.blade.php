@@ -18,7 +18,7 @@
         <div class="col-sm-12">
             <div class="card-box">
                 <div class="row">
-                    <div class="col-2">
+                    <!-- <div class="col-2">
                         <div class="form-group">
                             <div wire:ignore>
                                 <div class="input-group">
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-2">
                         <div class="form-group">
                             <div>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
 
-                <div class="row" style="display: {{$show}}">
+                <div class="row">
                     <div class="col-lg-12">
                         <table border="1" width="100%">
 

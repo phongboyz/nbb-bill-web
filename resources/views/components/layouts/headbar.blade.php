@@ -19,25 +19,25 @@
 
                 <li class="dropdown notification-list">
                     <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light text-white" data-toggle="dropdown"
-                        href="#" role="button" aria-haspopup="false" aria-expanded="false"> Admin
-                        <img src="{{asset('backend/assets/images/users/avatar-7.jpg')}}" alt="user-image" class="rounded-circle">
+                        href="#" role="button" aria-haspopup="false" aria-expanded="false"> {{auth()->user()->name}}
+                        <!-- <img src="{{asset('backend/assets/images/users/avatar-7.jpg')}}" alt="user-image" class="rounded-circle"> -->
                     </a>
                     <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                         <!-- item-->
                         <div class="dropdown-header noti-title text-center">
-                            <h6 class="text-overflow m-0"> admin </h6>
+                            <h6 class="text-overflow m-0"> {{auth()->user()->name}} </h6>
                         </div>
 
                         <!-- item-->
-                        <a href="#" class="dropdown-item notify-item">
+                        <!-- <a href="#" class="dropdown-item notify-item">
                             <i class="mdi mdi-account-outline"></i>
                             <span>ໂປຣຟາຍ</span>
-                        </a>
+                        </a> -->
 
                         <div class="dropdown-divider"></div>
 
                         <!-- item-->
-                        <a href="#" class="dropdown-item notify-item">
+                        <a href="{{route('logout')}}" class="dropdown-item notify-item">
                             <i class="mdi mdi-logout-variant"></i>
                             <span>ອອກຈາກລະບົບ</span>
                         </a>
@@ -49,7 +49,7 @@
 
             <!-- LOGO -->
             <div class="logo-box">
-                <a href="index-1.html" class="logo text-center">
+                <a href="{{route('dashboard')}}" class="logo text-center">
                     <span class="logo-lg">
                         <img src="{{asset('logo/logo-nbb.png')}}" alt="" height="30">
                         <span class="logo-lg-text-light">ນະໂຍບາຍ</span>

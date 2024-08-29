@@ -5,10 +5,10 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="javascript: void(0);">ໜ້າຫຼັກ</a></li>
-                        <li class="breadcrumb-item active">ຂໍ້ມູນໃບມອບເງິນສົດ</li>
+                        <li class="breadcrumb-item active">ຂໍ້ມູນໃບຖອນເງິນສົດ</li>
                     </ol>
                 </div>
-                <h4 class="page-title">ຂໍ້ມູນໃບມອບເງິນສົດ</h4>
+                <h4 class="page-title">ຂໍ້ມູນໃບຖອນເງິນສົດ</h4>
             </div>
         </div>
     </div>

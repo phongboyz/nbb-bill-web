@@ -25,11 +25,11 @@
                 </li>
 
                 <li class="has-submenu">
-                    <a href="{{route('bill-morp-sit-aon')}}"> <i class="mdi mdi-file-document-outline"></i>ຂໍ້ມູນໃບມອບສິດການໂອນ</a>
+                    <!-- <a href="{{route('bill-morp-sit-aon')}}"> <i class="mdi mdi-file-document-outline"></i>ຂໍ້ມູນໃບມອບສິດການໂອນ</a> -->
                 </li>
 
                 <li class="has-submenu">
-                    <a href="#"> <i class="mdi mdi-file-table-box-multiple-outline"></i>ລາຍງານ</a>
+                    <a href="{{route('report')}}"> <i class="mdi mdi-file-table-box-multiple-outline"></i>ລາຍງານ</a>
                 </li>
 
             </ul>

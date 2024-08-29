@@ -171,8 +171,8 @@ class EditComponent extends Component
                 $bm->acno_mee = $this->acno_mee;
                 $bm->branch_receive = $this->branch_receive;
                 $bm->note = $this->note;
-                $bm->user_id = 1;
-                $bm->department_id = 1;
+                $bm->user_id = auth()->user()->id;
+                $bm->department_id = auth()->user()->dpart_id;
                 $bm->del = 1;
                 $bm->save();
         

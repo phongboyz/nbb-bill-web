@@ -94,9 +94,9 @@
                                                 {{number_format($item->money)}}</td>
                                             <td class="text-center p-2">
                                                 @if ($item->type == 'ISD')
-                                                <span class="badge bg-warning">ໂອນພາຍໃນ</span>
+                                                <span class="badge bg-warning">ໃບໂອນບັນຊີເງິນ</span>
                                                 @else
-                                                <span class="badge bg-info">ໂອນຕ່າງແຂວງ</span>
+                                                <span class="badge bg-info">ໃບຂໍໂອນເງິນ</span>
                                                 @endif
                                             </td>
                                             <td class="text-center p-2">
